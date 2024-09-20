@@ -1,0 +1,381 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 2200px;
+    margin: 0 auto;
+    overflow-y: scroll;  
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.ip-section {
+    text-align: center;
+    margin-bottom: 0.1px;
+}
+.input-field {
+    width: 110px; /* Width of the input field */
+    padding: 5px;
+    font-size: 16px;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border: 2px solid red; /* Red border around the input */
+    border-radius: 5px; /* Slightly rounded corners */
+    outline: none; /* Remove default outline */
+}
+
+/* Placeholder style */
+.input-field::placeholder {
+    color: gray; /* Gray color for the placeholder */
+}
+
+.api-commands-section {
+	margin-right: 0px;
+    text-align: center;
+    /* Positioning */
+    position: fixed; /* Fixes the button at a specific position on the page */
+    top: 160px; /* Distance from the top of the page */
+    left: 100px; /* Distance from the left of the page */
+    z-index: 999; /* Ensure it appears above other content */
+}
+/* Wrapper class for the dropdown and button */
+.api-commands-wrapper {
+	padding: 10px;
+	border-radius: 20px;       /* Rounded corners */
+	width: 200px;
+	margin: 10px auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow */
+	background-color: #cd5d00;
+	text-align: center;
+	margin-bottom: 20px
+}
+
+/* Dropdown menu styling */
+.api-endpoint {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15px;
+	border: 10px solid #ccc;
+	transition: all 0.3s ease;  /* Smooth transitions */
+	outline: none;
+	background-color: #cd5d00;
+}
+
+/* Dropdown menu styling */
+.api-endpoints {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15px;
+	border: 10px solid #ccc;
+	transition: all 0.3s ease;  /* Smooth transitions */
+	outline: none;
+	background-color: #cd5d00;
+}
+/* Dropdown menu styling */
+.api-endpoint-v3 {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15px;
+	border: 10px solid #ccc;
+	transition: all 0.3s ease;  /* Smooth transitions */
+	outline: none;
+	background-color: #cd5d00;
+	margin-bottom: 20px;
+}
+
+/* Dropdown menu styling */
+.api-endpoint-v4 {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15px;
+	border: 10px solid #cbc;
+	transition: all 0.3s ease;  /* Smooth transitions */
+	outline: none;
+	background-color: #cd5d00;
+}
+
+
+/* Dropdown menu styling */
+.api-endpoints-v3 {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15px;
+	border: 10px solid #ccc;
+	transition: all 0.3s ease;  /* Smooth transitions */
+	outline: none;
+	background-color: #cd5d00;
+}
+
+/* Dropdown menu styling */
+.api-endpoints-v4 {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 15px;
+	border: 10px solid #cbc;
+	transition: all 0.3s ease;  /* Smooth transitions */
+	outline: none;
+	background-color: #cd5d00;
+}
+
+/* For making the hovered option look bigger and highlighted in cyan */
+.hovered-option {
+	background-color: cyan;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.menu-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 210px; /* Adjust the width as needed */
+    height: 100%;
+    background: linear-gradient(
+        45deg, /* Angle of the lines */
+        rgba(255, 255, 255, 0.2) 25%, /* Background color */
+        rgba(255, 255, 255, 0.3) 50%, /* Light line */
+        rgba(255, 255, 255, 0.1) 50%, /* Transparent stripe */
+        rgba(255, 255, 255, 0.2) 50%
+    );
+    background-size: 25px 25px; /* Size of the stripes */
+    font-weight: bold;
+    box-shadow: 20px 0 15px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 20px; /* Add some padding */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    z-index: 1000; /* Keep it above other content */
+    backdrop-filter: blur(5100px); /* Frosted glass effect */
+    border-right: 5px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+
+/* Menu content styling */
+.menu-wrapper select {
+  width: 90%;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  outline: none;
+  font-size: 14px;
+}
+
+.menu-wrapper option {
+  background-color: solid white;
+  color: solid white;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/* Button styling */
+.button-api {
+	margin-top: 15px;
+	padding: 10px 20px;
+	font-size: 18px;
+	background-color: #007BFF;  /* Blue button */
+	color: white;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;  /* Smooth transitions */
+}
+
+/* Button hover effect */
+.button-api:hover {
+	background-color: #0056b3;  /* Darker blue on hover */
+	transform: scale(1.1);      /* Slight scale effect */
+	//box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);  /* Slight shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.api-commands-wrapper {
+		width: 90%;
+	}
+}
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button-show {
+    padding: 10px 15px;
+    border: none;
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.button-api {
+    padding: 10px 15px;
+    border: none;
+    color: solid white;
+    background-color: #000000;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Button hover effect */
+.button-show:hover {
+	background-color: #0056b3;  /* Darker blue on hover */
+	transform: scale(1.1);      /* Slight scale effect */
+	box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);  /* Slight shadow */
+}
+
+.button-show:active {
+    animation: blink 0.5s step-start infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.error, .error2 {
+    padding: 10px;
+    border-radius: 20px;   /* Rounded corners */
+    width: 200px;
+    display: inline; /* Change to inline-block for more control */
+    text-align: center;
+    transform: scale(1.25);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;  /* Example of cool font */
+    color: black;
+    animation: blink 1s infinite;      /* Apply the blink animation */
+    font-weight: bold;                 /* Bold font */
+    letter-spacing: 1px;               /* Adjust letter spacing for cooler effect */
+}
+
+.error {
+    background-color: red;
+}
+
+.error2 {
+    background-color: #0000ff;
+}
+
+.ip-using-container {
+    text-align: center;  /* Center-aligns the inline-block element */
+}
+.error-using-container {
+    text-align: center;  /* Center-aligns the inline-block element */
+}
+.warning-using-container {
+    text-align: center;  /* Center-aligns the inline-block element */
+}
+.using-ip-add {
+	border-radius: 10px;
+	width: 300px;
+    background-color: #00b72c;
+    display: inline-block;
+    font-weight: bold;                 /* Bold font */
+    letter-spacing: 1px;               /* Adjust letter spacing for cooler effect */
+    position: fixed; /* Fixes the button at a specific position on the page */
+    top: 200px; /* Distance from the top of the page */
+    left: 690px; /* Distance from the left of the page */
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+@keyframes blink {
+    25% {
+        background-color: black;
+        color: white;
+    }
+}
+
+.warning {
+	border-radius: 10px;
+	width: 300px;
+    background-color: yellow;
+    display: inline-block;
+    animation: blink 1s infinite;      /* Apply the blink animation */
+    font-weight: bold;                 /* Bold font */
+    letter-spacing: 1px;               /* Adjust letter spacing for cooler effect */
+    position: fixed; /* Fixes the button at a specific position on the page */
+    top: 260px; /* Distance from the top of the page */
+    left: 690px; /* Distance from the left of the page */
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+@keyframes blink {
+    25% {
+        background-color: black;
+        color: white;
+    }
+}
+
+/* Adding a cool text shadow effect */
+.error {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Dark shadow for text */
+    border-radius: 20px;   /* Rounded corners */
+    width: 200px;
+    display: inline; 
+    color: black;
+    animation: blink 1s infinite;      /* Apply the blink animation */
+    font-weight: bold;                 /* Bold font */
+    letter-spacing: 1px;               /* Adjust letter spacing for cooler effect */
+}
+
+@keyframes blink {
+    25% {
+        background-color: black;
+        color: white;
+    }
+}
+
+.console {
+    width: 84%;
+    height: 554px;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-left: auto;
+	margin-right: auto;
+    overflow: auto;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    text-align: left;
+    position: fixed; /* Fixes the button at a specific position on the page */
+    top: 315px; /* Distance from the top of the page */
+    left: 260px; /* Distance from the left of the page */
+    z-index: 999; /* Ensure it appears above other content */
+}
